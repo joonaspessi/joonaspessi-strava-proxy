@@ -1,0 +1,17 @@
+{
+  "name": "joonaspessi-strava-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joonas Pessi",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "request": "^2.66.0"
+  }
+}
