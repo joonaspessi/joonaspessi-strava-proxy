@@ -7,6 +7,7 @@ var router = express.Router();
 
 var stravaAccessToken = process.env["STRAVA_ACCESS_TOKEN"];
 
+
 function encodeQueryParameters(parameters) {
     var query = _.map(parameters, function(value, key) {
         return key + "=" + value;
