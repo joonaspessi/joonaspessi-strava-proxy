@@ -8,7 +8,7 @@ var _ = require("lodash");
 var router = express.Router();
 
 function getAccessToken() {
-    return fs.readFileSync(path.join(".stravaAccessToken")).toString();
+    return fs.readFileSync(path.join(".stravaAccessToken")).toString().trim();
 }
 
 var stravaAccessToken = getAccessToken();
