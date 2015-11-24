@@ -6,7 +6,7 @@ var _ = require("lodash");
 var router = express.Router();
 
 var stravaAccessToken = process.env["STRAVA_ACCESS_TOKEN"];
-
+console.log("using access token:", stravaAccessToken);
 
 function encodeQueryParameters(parameters) {
     var query = _.map(parameters, function(value, key) {
