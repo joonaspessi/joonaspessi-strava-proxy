@@ -1,3 +1,5 @@
+var fs = require("fs");
+var path = require("path");
 var express = require("express");
 var Promise = require("bluebird");
 var request = Promise.promisify(require("request"));
@@ -5,7 +7,11 @@ var path = require("path");
 var _ = require("lodash");
 var router = express.Router();
 
-var stravaAccessToken = process.env["STRAVA_ACCESS_TOKEN"];
+function getAccessToken() {
+    return fs.readFileSync(path.join(".stravaAccessToken")).toString();
+}
+
+var stravaAccessToken = getAccessToken();
 console.log("using access token:", stravaAccessToken);
 
 function encodeQueryParameters(parameters) {
